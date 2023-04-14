@@ -1,0 +1,10 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block btn %}
+<div class="container-fluid">
+        <div align="center">
+        <img class="img-fluid" src="{% static 'images/thk.png' %}" alt="Thank You"></div>
+        <p class="h1" align="center">Thanks For Visiting Our Site, <kbd>MR FUTURE-CHANGER</kbd>;</p>
+        <p class="h4" align="center"><mark>Do You Want To Visit Again,Click <a href="{% url 'home' %}"><kbd>ENROLL</kbd></a></mark></p>
+</div>
+{% endblock %}

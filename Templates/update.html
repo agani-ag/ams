@@ -1,0 +1,51 @@
+{% extends 'main.html' %}
+{% block body %}
+<form method="post">
+{% csrf_token %}
+<div class="container ">
+    <h2>Update Data Into Database</h2><br>
+
+<div class="form-group">
+  <label for="t1"><b>First Name:</b></label>
+  <input type="text" class="form-control" id="t1" name="t1" value="{{ b1.fname }}">
+</div><br>
+
+<div class="form-group">
+  <label for="t2"><b>Last Name:</b></label>
+  <input type="text" class="form-control" id="t2" name="t2" value="{{ b1.lname }}">
+</div><br>
+
+<div class="form-group">
+  <label for="t3"><b>Mobile :</b></label>
+  <input type="text" class="form-control" id="t3" name="t3" value="{{ b1.mobile }}">
+</div><br>
+
+<div class="form-group">
+  <label for="t4"><b>Email :</b></label>
+  <input type="text" class="form-control" id="t4" name="t4" value="{{ b1.email }}">
+</div>
+
+<div class="form-group">
+    <br><b>City :</b>
+        <select id="t5" name="t5" class="form-select" aria-label="Default select example">
+        <option selected>{{ b1.city }}</option>
+            {% for i in c1 %}
+                <option>{{ i.city_n }}</option>
+            {% endfor %}
+
+            </select>
+    <br><b>Course :</b>
+        <select id="t6" name="t6" class="form-select" aria-label="Default select example">
+        <option selected>{{ b1.course }}</option>
+            {% for i in c2 %}
+                <option>{{ i.course_n }}</option>
+            {% endfor %}
+
+            </select>
+</div><br>
+    <div class="form-group">
+    <input type="submit" value="UpdateData" name="s1" class="btn btn-primary">
+    </div>
+</div>
+</form>
+{% endblock %}

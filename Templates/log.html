@@ -1,0 +1,24 @@
+{% extends 'navbar.html' %}
+{% block btn %}
+<div class="container">
+<h3>Login Page</h3>
+<form action="readlog" method="post" class="was-validated">
+    {% csrf_token %}
+    <h2>{{User}}{{msg}}</h2>
+
+  <div class="mb-3 mt-3">
+    <label for="t1" class="form-label">Username:</label>
+    <input type="text" class="form-control" id="t1" value="{{msg}}" placeholder="Enter username" name="t1" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+  </div>
+  <div class="mb-3">
+    <label for="t2" class="form-label">Password:</label>
+    <input type="password" class="form-control" id="t2" placeholder="Enter password" name="t2" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+  </div><br>
+  <input type="submit" value="Login" class="btn btn-primary">
+</form>
+</div>
+{% endblock %}

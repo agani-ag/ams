@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block body %}
+<div class="container-fluid">
+        <div align="center">
+        <img class="rounded-circle" src="{% static 'images/success.jpg' %}" alt="Successfully Enrolled"></div>
+        <p class="h1" align="center">Your Admission Is Successfully Enrolled, <kbd>MR {{A}}</kbd>;</p>
+        <p class="h4" align="center"><mark>Do You Need To Enroll Another Admission</mark></p>
+        <p class="h5" align="center"><mark>If Yes Click <a href="{% url 'insert' %}"><kbd>ENROLL</kbd></a>
+                ,If No Click <a href="{% url 'index' %}"><kbd>Index</kbd></a>
+        </mark></p>
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'navbar.html' %}
+{% block btn %}
+<div class="container">
+<form action="readreg" method="post">
+    {% csrf_token %}
+
+<div class="container ">
+
+<h3>Register Page</h3><br>
+
+<div class="form-group">
+  <label for="t1"><b>User Name :</b></label>
+  <input type="text" class="form-control" id="t1" name="t1">
+</div><br>
+
+<div class="form-group">
+  <label for="t2"><b>Email :</b></label>
+  <input type="text" class="form-control" id="t2" name="t2">
+</div><br>
+
+<div class="form-group">
+  <label for="t3"><b>Password :</b></label>
+  <input type="text" class="form-control" id="t3" name="t3">
+</div><br>
+
+
+    <div class="form-group">
+    <input type="Submit" value="Register" class="btn btn-primary">
+    </div>
+</div>
+
+</form>
+    </div>
+{% endblock %}
